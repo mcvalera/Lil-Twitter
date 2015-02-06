@@ -1,0 +1,47 @@
+.navigation {
+  /*border: 1px solid gray;*/
+}
+
+.navigation #logo {
+  height: 50px;
+  margin-left: 0px;
+  position: absolute;
+  top: 5px;
+}
+
+.navigation ul {
+  margin-top: 0px;
+  text-align: center;
+  display: block;
+  padding: 0px;
+}
+
+.navigation li{
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#title {
+  margin-left: 50px;
+  font-family: 'Arizonia', cursive;
+  font-size: 50px;
+}
+
+.wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.container {
+/*  margin-top: 100px;
+  padding-top: 20px;*/
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+

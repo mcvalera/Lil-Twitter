@@ -1,2 +1,19 @@
-<h1> WELCOME TO LIL-TWITTER</h1>
-
+<div class="container">
+  <% if session_logged_in? %>
+    <form action='/tweets' method='post'>
+      <input type='text' name='content' placeholder="What's Cattening?">
+      <input type='submit' value='Meow!'>
+    </form>
+  <% end %>
+  <% @tweets.each do |tweet| %>
+    <table>
+      <tr>
+        <td><p><%= tweet.user.username %></p></td>
+      </tr>
+      <tr>
+        <td><p><%= tweet.content %></p></td>
+      </tr>
+    </table>
+    <br>
+  <% end %>
+</div>

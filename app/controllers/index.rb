@@ -1,4 +1,5 @@
 get '/' do
+  @tweets = Tweet.all
   erb :index
 end
 
@@ -11,3 +12,4 @@ post '/users' do
   session[:current_user_id] = user.id
     erb :profile # still needs profile page
 end
+
