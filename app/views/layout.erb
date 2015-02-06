@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -15,22 +17,30 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Meow.r</title>
 </head>
 <body>
   <div class="navigation">
-    <% if session_logged_in? %>
-      <p><a href="/logout">Log out</a></p>
-    <% else %>
-      <form action="/login" method="post">
-        Username: <input type="text" name="username">
-        Password: <input type="password" name="password">
-        <input type="submit" value="log in!">
-      </form>
-      <p><a href="/users/new">Register</a></p>
-    <% end %>
+    <ul>
+      <li><img id="logo" src="http://i58.tinypic.com/2urqd15.jpg" /></li>
+      <% if session_logged_in? %>
+        <li><p><a href="/">Home</a></p></li>
+        <li><p><a href="/logout">Log out</a></p></li>
+      <% else %>
+        <li><form action="/login" method="post">
+          Username: <input type="text" name="username">
+          Password: <input type="password" name="password">
+          <input type="submit" value="log in!"></li>
+        </form>
+        <li><p><a href="/users/new">Register</a></p></li>
+      <% end %>
+    </ul>
   </div>
-  <%= yield %>
+
+  <div class="wrapper">
+    <h1 id="title">Meow.r</h1>
+    <%= yield %>
+  </div>
 </body>
 </html>
 
