@@ -1,2 +1,38 @@
 
-<img src="http://scienceblogs.com/gregladen/files/2012/12/Beautifull-cat-cats-14749885-1600-1200.jpg">
+<div class="container">
+
+  <div class="profile_photo">
+    <a href="/user/<%= session_current_user.id %>/feed">
+      <img src="<%= gravatar_image %>">
+    </a>
+  </div>
+
+  <div class="user-info">
+    <ul>
+      <li><%= session_current_user.username %></li>
+      <li><%= session_current_user.email  %></li>
+    </ul>
+  </div>
+
+  <div class="link-groups">
+    <ul>
+      <a href="/user/<%= session_current_user.id %>/tweets"><li>Tweets</li></a>
+      <a href="/user/<%= session_current_user.id %>/followers"><li>Followers</li></a>
+      <a href="/user/<%= session_current_user.id %>/following"><li>Following</li></a>
+    </ul>
+  </div>
+
+  <div class="feed">
+    <% if show_tweets? %>
+      <%= erb :"/partials/_tweets" %>
+    <% elsif show_followers? %>
+      <%= erb :"/partials/_followers" %>
+    <% elsif show_following? %>
+      <%= erb :"/partials/_following" %>
+    <% else %>
+      <%= erb :"/partials/_feed" %>
+    <% end %>
+  </div>
+
+</div>
+
