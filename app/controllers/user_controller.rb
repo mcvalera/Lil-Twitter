@@ -1,5 +1,6 @@
 # user_controller.rb
 get '/' do
+  @tweets = Tweet.all
   erb :index
 end
 
@@ -26,6 +27,7 @@ end
 
 get '/logout' do
   session.clear
+  @tweets = Tweet.all
   erb :index
 end
 
