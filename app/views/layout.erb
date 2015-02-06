@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meow.r logo choice 1 -->
   <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+  <!-- Meow.r choice 2 -->
+  <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+  <!-- for main body -->
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <!-- for navigation bar -->
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -22,23 +28,24 @@
 <body>
   <div class="navigation">
     <ul>
-      <li><img id="logo" src="http://i58.tinypic.com/2urqd15.jpg" /></li>
+      <li><img id="logo" src="http://www.clker.com/cliparts/K/W/7/G/5/J/orange-cat-silhouette-md.png" /></li>
       <% if session_logged_in? %>
-        <li><p><a href="/">Home</a></p></li>
-        <li><p><a href="/logout">Log out</a></p></li>
+        <li><p><a href="/">HOME</a></p></li>
+        <li><p><a href="/logout">LOG OUT</a></p></li>
       <% else %>
         <li><form action="/login" method="post">
-          Username: <input type="text" name="username">
-          Password: <input type="password" name="password">
-          <input type="submit" value="log in!"></li>
+          USERNAME: <input type="text" name="username">
+          PASSWORD: <input type="password" name="password">
+          <input type="submit" value="Log in"></li>
         </form>
-        <li><p><a href="/users/new">Register</a></p></li>
+        <li><p><a href="/users/new">REGISTER</a></p></li>
       <% end %>
     </ul>
   </div>
 
   <div class="wrapper">
-    <h1 id="title">Meow.r</h1>
+    <h1 id="title">Mraw.r</h1>
+    <!-- Squawk? -->
     <%= yield %>
   </div>
 </body>
