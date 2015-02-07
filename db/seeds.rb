@@ -8,8 +8,8 @@ User.all.each do |user|
   end
 end
 
-User.all.each do |user|
-  3.times do
-    Relationship.create(follower_id: user.id, followee_id: [*(1..5)].sample )
-  end
-end
+# User.all.each do |user|
+#   3.times do
+#     Relationship.create(follower_id: user.id, followee_id: [*(1..5)].sample )
+#   end
+# end

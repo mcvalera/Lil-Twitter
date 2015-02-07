@@ -10,4 +10,8 @@ helpers do
     User.find(session[:current_user_id])
   end
 
+  def all_users
+    User.all
+  end
+
 end

@@ -1,1 +1,13 @@
-<p>Feed</p>
+<h1>Your Feed</h1>
+  <% filter_tweets_by_idols.each do |tweet| %>
+    <table id="tweet_feed">
+      <tr>
+        <td><b><%= tweet.user.username %></b></td>
+      </tr>
+      <tr>
+        <td><p id="tweet_content"><%= tweet.content %></p></td>
+      </tr>
+    </table>
+    <br>
+  <% end %>
+</div>

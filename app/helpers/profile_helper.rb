@@ -22,4 +22,15 @@ helpers do
     session[:gravatar_image_link]
   end
 
+  def filter_tweets_by_idols
+    user = session_current_user
+    tweets = []
+    user.idols.each do |idol|
+      tweets += idol.tweets
+    end
+    tweets
+  end
+
 end
+
+
