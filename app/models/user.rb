@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
   has_many :fans, through: :fan_relationships
   has_many :idols, through: :idol_relationships
 
+  #validates :username, :email, uniqueness: true, presence: true
+
 end
 

@@ -4,7 +4,7 @@ end
 
 User.all.each do |user|
   5.times do
-    Tweet.create(user_id: user.id, content: Faker::Company.catch_phrase )
+    Tweet.create(user_id: user.id, content: Faker::Company.catch_phrase, original_user_id: user.id )
   end
 end
 

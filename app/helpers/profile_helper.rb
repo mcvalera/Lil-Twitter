@@ -31,6 +31,10 @@ helpers do
     tweets
   end
 
+  def filter_tweets_for_user
+    session_current_user.tweets
+  end
+
 end
 
 

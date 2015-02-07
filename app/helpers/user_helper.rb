@@ -7,7 +7,7 @@ helpers do
   end
 
   def session_current_user
-    User.find(session[:current_user_id])
+    User.find_by_id(session[:current_user_id])
   end
 
   def all_users
