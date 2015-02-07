@@ -13,3 +13,4 @@ class User < ActiveRecord::Base
   # has_many :followings, through: :relationships
 
 end
+
