@@ -4,12 +4,12 @@ end
 
 User.all.each do |user|
   5.times do
-    Tweet.create(user_id: user.id, content: Faker::Company.catch_phrase )
+    Tweet.create(user_id: user.id, content: Faker::Company.catch_phrase, original_user_id: user.id )
   end
 end
 
-User.all.each do |user|
-  3.times do
-    Relationship.create(follower_id: user.id, followee_id: [*(1..5)].sample )
-  end
-end
+# User.all.each do |user|
+#   3.times do
+#     Relationship.create(follower_id: user.id, followee_id: [*(1..5)].sample )
+#   end
+# end

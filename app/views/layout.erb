@@ -28,7 +28,7 @@
 <body>
   <div class="navigation">
     <ul>
-      <li><img id="logo" src="http://www.clker.com/cliparts/K/W/7/G/5/J/orange-cat-silhouette-md.png" /></li>
+      <a href="/users/<%= session_current_user.id %>"><li><img id="logo" src="http://www.clker.com/cliparts/K/W/7/G/5/J/orange-cat-silhouette-md.png" /></li></a>
       <% if session_logged_in? %>
         <li><p><a href="/">HOME</a></p></li>
         <li><p><a href="/logout">LOG OUT</a></p></li>

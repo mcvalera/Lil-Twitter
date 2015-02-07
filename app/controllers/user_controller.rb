@@ -38,4 +38,9 @@ get '/users/:id' do
   erb :profile
 end
 
+get '/follow/:user_id' do
+  Relationship.create(fan_id: session_current_user.id, idol_id: params[:user_id])
+  erb :profile
+end
+
 #{}"tosharmila@gmail.com"

@@ -33,4 +33,12 @@
     <% end %>
   </div>
 
+  <div class="something-else">
+    <ul>
+    <% all_users.each do |user|  %>
+      <li><%= user.username %> <a href="/follow/<%= user.id %>">Follow</a></li>
+    <% end %>
+    </ul>
+  </div>
+
 </div>
