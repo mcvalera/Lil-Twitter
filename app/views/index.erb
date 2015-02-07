@@ -1,17 +1,17 @@
 <div class="container">
   <% if session_logged_in? %>
-    <form action='/tweets' method='post'>
+    <form action='/tweets' method='post' id="tweet_box">
       <input type='text' name='content' placeholder="What's Cattening?">
       <input type='submit' value='Meow!'>
     </form>
   <% end %>
   <% @tweets.each do |tweet| %>
-    <table>
+    <table id="tweet_feed">
       <tr>
-        <td><p><%= tweet.user.username %></p></td>
+        <td><b><%= tweet.user.username %></b></td>
       </tr>
       <tr>
-        <td><p><%= tweet.content %></p></td>
+        <td><p id="tweet_content"><%= tweet.content %></p></td>
       </tr>
     </table>
     <br>
